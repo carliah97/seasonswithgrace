@@ -27,6 +27,7 @@ window.SWG_LAUNCH_CONFIG = {
   // Optional social links
   facebookUrl: "",
   instagramUrl: "",
+  googleReviewUrl: "",
 
   // Public wording
   responseMessage: "Your request has been received. Our team will review the route and contact you about availability and pricing."

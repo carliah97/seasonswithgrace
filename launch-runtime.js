@@ -31,6 +31,16 @@
     if(C.email) a.href = "mailto:" + C.email;
     else a.href = "#quote";
   });
+  document.querySelectorAll("[data-review-link]").forEach(a => {
+    if(C.googleReviewUrl){
+      a.href = C.googleReviewUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+    }else{
+      a.href = "#contact";
+      a.setAttribute("aria-disabled","true");
+    }
+  });
 
   // Attribution storage for ad leads.
   const params = new URLSearchParams(location.search);
