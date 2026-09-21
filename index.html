@@ -212,20 +212,26 @@
         <div class="career-copy">
           <span class="section-kicker light">Drive With Seasons With Grace</span>
           <h3>A calm, careful standard of service.</h3>
-          <p>Driver opportunities are reviewed based on route fit, experience, communication, vehicle readiness, and the needs of each trip. Submitting an application does not guarantee work or employment.</p>
-          <ul><li>Pet handling or transport experience</li><li>Reliable vehicle and travel readiness</li><li>Clear customer communication</li><li>Availability for regional or long-distance routes</li></ul>
+          <p>We are seeking motivated, reliable PRN drivers for pet transport. Opportunities may be structured as independent-contractor work; compensation, payment timing, and final requirements are discussed during onboarding. Submitting an application does not guarantee work or employment.</p>
+          <ul><li>At least 18 years old and legally eligible to work in the U.S.</li><li>Valid driver license with a clean, safe driving record</li><li>Willingness to drive extended routes and work weekends</li><li>Animal-friendly handling and clear customer communication</li><li>Vehicle, personal insurance, pet-care supplies, and travel readiness</li></ul>
+          <a class="btn btn-outline-light career-full-application" href="https://form.jotform.com/253074878221056" target="_blank" rel="noopener">VIEW FULL APPLICATION</a>
         </div>
         <form id="careerForm" class="career-form">
           <div class="career-form-grid">
             <label>Full Name<input name="applicantName" autocomplete="name" required placeholder="Your full name"></label>
             <label>Phone<input name="applicantPhone" autocomplete="tel" required placeholder="(555) 555-5555"></label>
             <label>Email<input name="applicantEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
-            <label>Home City / State<input name="applicantLocation" required placeholder="City, state"></label>
+            <label>Home City / State<input name="applicantLocation" autocomplete="address-level2" required placeholder="City, state"></label>
+            <label>Over 18?<select name="ageEligible" required><option value="">Choose one</option><option>Yes</option><option>No</option></select></label>
+            <label>U.S. Work Eligibility<select name="workEligible" required><option value="">Choose one</option><option>Yes</option><option>No</option></select></label>
+            <label>Valid Clean License?<select name="licenseStatus" required><option value="">Choose one</option><option>Yes</option><option>No</option></select></label>
+            <label>Days Available<input name="availability" required placeholder="Example: 4 days, including weekends"></label>
             <label>Driver Experience<select name="driverExperience" required><option value="">Choose one</option><option>Pet transport</option><option>Professional driving</option><option>Animal care</option><option>New to pet transport</option></select></label>
             <label>Service Area<input name="serviceArea" required placeholder="States or regions served"></label>
-            <label class="career-span-2">Tell us about your experience<textarea name="applicationNotes" rows="5" required placeholder="Share your driving, pet-care, vehicle, availability, and route experience."></textarea></label>
+            <label>Referral Name<input name="referralName" placeholder="Optional"></label>
+            <label class="career-span-2">Work History / Experience<textarea name="applicationNotes" rows="5" required placeholder="Share your driving, pet-care, vehicle, availability, and route experience."></textarea></label>
           </div>
-          <label class="career-consent"><input type="checkbox" name="applicationConsent" required><span>I confirm this information is accurate and agree that Seasons With Grace may contact me about driver opportunities.</span></label>
+          <label class="career-consent"><input type="checkbox" name="applicationConsent" required><span>I confirm this information is accurate and agree that Seasons With Grace may contact me about driver opportunities. I understand this is an application for review, not a job offer.</span></label>
           <button class="btn btn-gold" type="submit" id="careerSubmit">SUBMIT DRIVER APPLICATION</button>
           <div id="careerStatus" class="launch-form-status" role="status"></div>
         </form>
