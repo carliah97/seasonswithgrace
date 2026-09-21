@@ -134,3 +134,59 @@ leadForm?.addEventListener("submit",async e=>{
     button.disabled = false;
   }
 });
+
+const reviewForm = document.getElementById("reviewForm");
+reviewForm?.addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  const status = document.getElementById("reviewStatus");
+  const button = document.getElementById("reviewSubmit");
+  const data = Object.fromEntries(new FormData(reviewForm).entries());
+  data.source = "SWG Website Review";
+  data.submittedAt = new Date().toISOString();
+  data.pageUrl = location.href;
+
+  status.className = "launch-form-status show";
+  status.textContent = "Sending your review…";
+  button.disabled = true;
+
+  try{
+    await submitLead(data);
+    status.className = "launch-form-status show ok";
+    status.textContent = "Thank you. Your review was sent to Seasons With Grace for approval.";
+    reviewForm.reset();
+  }catch(err){
+    status.className = "launch-form-status show err";
+    status.textContent = err.message || "Your review could not be sent. Please try again.";
+  }finally{
+    button.disabled = false;
+  }
+});
+
+const careerForm = document.getElementById("careerForm");
+careerForm?.addEventListener("submit",async e=>{
+  e.preventDefault();
+
+  const status = document.getElementById("careerStatus");
+  const button = document.getElementById("careerSubmit");
+  const data = Object.fromEntries(new FormData(careerForm).entries());
+  data.source = "SWG Driver Application";
+  data.submittedAt = new Date().toISOString();
+  data.pageUrl = location.href;
+
+  status.className = "launch-form-status show";
+  status.textContent = "Sending your application…";
+  button.disabled = true;
+
+  try{
+    await submitLead(data);
+    status.className = "launch-form-status show ok";
+    status.textContent = "Thank you. Your driver application was sent for review.";
+    careerForm.reset();
+  }catch(err){
+    status.className = "launch-form-status show err";
+    status.textContent = err.message || "Your application could not be sent. Please try again.";
+  }finally{
+    button.disabled = false;
+  }
+});

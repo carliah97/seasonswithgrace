@@ -41,6 +41,7 @@
       <a href="#how">How It Works</a>
       <a href="#safety">Safety</a>
       <a href="#reviews">Reviews</a>
+      <a href="#careers">Drive With Us</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="#quote">Get a Quote</a>
@@ -167,9 +168,25 @@
         <article><span class="review-mark">02</span><h3>Thoughtful handling</h3><p>Each pet’s routine, temperament, comfort, and special-care needs deserve attention.</p></article>
         <article><span class="review-mark">03</span><h3>A smooth handoff</h3><p>The journey ends with confirmed delivery details and a calm reunion with the right contact.</p></article>
       </div>
+      <article class="customer-review">
+        <img class="customer-review-photo" src="images/puppy-review.jpg.png" alt="Puppy safely settled in a travel crate">
+        <div class="customer-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Amazing experience from pickup to drop-off! Communication was great throughout the entire trip, and our pup arrived happy, safe, and well cared for.”</blockquote>
+        <span class="customer-review-label">Customer review</span>
+      </article>
       <div class="review-cta">
-        <div><span class="section-kicker light">Have we transported your pet?</span><h3>Share your experience.</h3><p>Verified customer feedback helps families understand what to expect.</p></div>
-        <a class="btn btn-gold" data-review-link href="#contact" data-track="review_click">Leave a Google Review</a>
+        <div class="review-cta-copy"><span class="section-kicker light">Have we transported your pet?</span><h3>Share your experience.</h3><p>Your review goes directly to Seasons With Grace for approval before it is published.</p></div>
+        <form id="reviewForm" class="review-form">
+          <div class="review-form-grid">
+            <label>Your Name<input name="reviewerName" autocomplete="name" required placeholder="Your name"></label>
+            <label>Pet Name<input name="reviewPet" required placeholder="Pet name"></label>
+            <label>Rating<select name="rating" required><option value="">Choose rating</option><option>5 stars</option><option>4 stars</option><option>3 stars</option><option>2 stars</option><option>1 star</option></select></label>
+            <label class="review-span-2">Your Review<textarea name="reviewText" rows="4" required placeholder="Tell us about your transport experience."></textarea></label>
+          </div>
+          <label class="review-permission"><input type="checkbox" name="publishPermission" value="Yes" required><span>I give Seasons With Grace permission to publish this review with my first name and pet name.</span></label>
+          <button class="btn btn-gold" type="submit" id="reviewSubmit">SUBMIT REVIEW</button>
+          <div id="reviewStatus" class="launch-form-status" role="status"></div>
+        </form>
       </div>
     </section>
 
@@ -182,6 +199,36 @@
         <details><summary>Can I include medication or special-care instructions?</summary><p>Yes. Include the details in your request. The requested care should be reviewed and confirmed before a booking is accepted.</p></details>
         <details><summary>What documents are needed?</summary><p>Requirements can vary based on the pet, route, destination, and current regulations. Required documents should be confirmed before pickup.</p></details>
         <details><summary>What if weather affects the trip?</summary><p>Safety comes first. Timing or routing may need to change when conditions make the original plan unsafe or impractical.</p></details>
+      </div>
+    </section>
+
+    <section class="section careers-section" id="careers">
+      <div class="section-head">
+        <span class="section-kicker">Driver Opportunities</span>
+        <h2>Care for pets. Own the journey.</h2>
+        <p>We are building a dependable network of thoughtful pet transport drivers. Tell us about your experience, availability, and service area.</p>
+      </div>
+      <div class="career-shell">
+        <div class="career-copy">
+          <span class="section-kicker light">Drive With Seasons With Grace</span>
+          <h3>A calm, careful standard of service.</h3>
+          <p>Driver opportunities are reviewed based on route fit, experience, communication, vehicle readiness, and the needs of each trip. Submitting an application does not guarantee work or employment.</p>
+          <ul><li>Pet handling or transport experience</li><li>Reliable vehicle and travel readiness</li><li>Clear customer communication</li><li>Availability for regional or long-distance routes</li></ul>
+        </div>
+        <form id="careerForm" class="career-form">
+          <div class="career-form-grid">
+            <label>Full Name<input name="applicantName" autocomplete="name" required placeholder="Your full name"></label>
+            <label>Phone<input name="applicantPhone" autocomplete="tel" required placeholder="(555) 555-5555"></label>
+            <label>Email<input name="applicantEmail" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Home City / State<input name="applicantLocation" required placeholder="City, state"></label>
+            <label>Driver Experience<select name="driverExperience" required><option value="">Choose one</option><option>Pet transport</option><option>Professional driving</option><option>Animal care</option><option>New to pet transport</option></select></label>
+            <label>Service Area<input name="serviceArea" required placeholder="States or regions served"></label>
+            <label class="career-span-2">Tell us about your experience<textarea name="applicationNotes" rows="5" required placeholder="Share your driving, pet-care, vehicle, availability, and route experience."></textarea></label>
+          </div>
+          <label class="career-consent"><input type="checkbox" name="applicationConsent" required><span>I confirm this information is accurate and agree that Seasons With Grace may contact me about driver opportunities.</span></label>
+          <button class="btn btn-gold" type="submit" id="careerSubmit">SUBMIT DRIVER APPLICATION</button>
+          <div id="careerStatus" class="launch-form-status" role="status"></div>
+        </form>
       </div>
     </section>
 
@@ -221,7 +268,7 @@
 
   <footer>
     <div class="footer-brand"><img src="images/logo.png" alt="Seasons With Grace logo"><div><strong>Seasons With Grace</strong><span>Ultimate Pet Transport & Concierge</span></div></div>
-    <div class="footer-links"><a href="#services">Services</a><a href="#quote">Quote</a><a href="#safety">Safety</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <div class="footer-links"><a href="#services">Services</a><a href="#quote">Quote</a><a href="#safety">Safety</a><a href="#reviews">Reviews</a><a href="#careers">Drive With Us</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
     <div class="footer-note"><b>Every season. Every journey. Handled with grace.</b><span>© <span id="year"></span> Seasons With Grace. All rights reserved.</span></div>
   </footer>
 
